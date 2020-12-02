@@ -41,6 +41,7 @@ public class fetchData extends AsyncTask<Void, Void, Void> {
             //Make API connection
             URL url = new URL("https://pokeapi.co/api/v2/pokemon/" + pokSearch);
             Log.i("logtest", "https://pokeapi.co/api/v2/pokemon/" + pokSearch);
+
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
 
             // Read API results
@@ -80,18 +81,18 @@ public class fetchData extends AsyncTask<Void, Void, Void> {
                         "Weight: " + jObject.getString("weight");
 
             // Get img SVG
-            JSONObject sprites = new JSONObject(jObject.getString("sprites"));
-            JSONObject other = new JSONObject(sprites.getString("other"));
-            JSONObject dream_world = new JSONObject(other.getString("dream_world"));
-            img  = dream_world.getString("front_default");
+//            JSONObject sprites = new JSONObject(jObject.getString("sprites"));
+//            JSONObject other = new JSONObject(sprites.getString("other"));
+//            JSONObject dream_world = new JSONObject(other.getString("dream_world"));
+//            img  = dream_world.getString("front_default");
 
             // Get type/types
-            JSONArray types = new JSONArray(jObject.getString("types"));
-            for(int i=0; i<types.length(); i++){
-                JSONObject type = new JSONObject(types.getString(i));
-                JSONObject type2  = new JSONObject(type.getString("type"));
-                strTypes.add(type2.getString("name"));
-            }
+//            JSONArray types = new JSONArray(jObject.getString("types"));
+//            for(int i=0; i<types.length(); i++){
+//                JSONObject type = new JSONObject(types.getString(i));
+//                JSONObject type2  = new JSONObject(type.getString("type"));
+//                strTypes.add(type2.getString("name"));
+//            }
         } catch (JSONException e) {
             e.printStackTrace();
         }
