@@ -6,8 +6,8 @@ import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.ahmadrosid.svgloader.SvgLoader;
-import com.squareup.picasso.Picasso;
+//import com.ahmadrosid.svgloader.SvgLoader;
+//import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -101,15 +101,15 @@ public class fetchData extends AsyncTask<Void, Void, Void> {
         // Set info
         MainActivity.txtDisplay.setText(this.results);
 
-        // Set main img
-        SvgLoader.pluck()
-                .with(MainActivity.act)
-                .load(img, MainActivity.imgPok);
-
-        // Set img types
-        for(int i=0; i<strTypes.size(); i++){
-            MainActivity.imgType[i].setImageResource(MainActivity.act.getResources().getIdentifier(strTypes.get(i), "drawable", MainActivity.act.getPackageName()));
-        }
+//        // Set main img
+//        SvgLoader.pluck()
+//                .with(MainActivity.act)
+//                .load(img, MainActivity.imgPok);
+//
+//        // Set img types
+//        for(int i=0; i<strTypes.size(); i++){
+//            MainActivity.imgType[i].setImageResource(MainActivity.act.getResources().getIdentifier(strTypes.get(i), "drawable", MainActivity.act.getPackageName()));
+//        }
 
     }
 }
